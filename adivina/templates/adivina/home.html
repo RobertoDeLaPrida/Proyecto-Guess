@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinar el numero</title>
+</head>
+<body>
+    <h1>Bienvenido juego para adivinar el numero secreto entre 1 y 100</h1>
+    <form action="{% url 'guess' %}" method="post">
+        {% csrf_token %}
+        <input type="number" name="numerito" required>
+        <button type="submit" name="">Adivinar</button>
+
+    </form>
+</body>
+</html>
