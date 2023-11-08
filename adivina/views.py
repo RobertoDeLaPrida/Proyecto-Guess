@@ -10,7 +10,7 @@ def home(request):
 
 def guess(request):
     numero =random.randint(1,100)
-    num_usr=int(request.POST('numerito'))
+    num_usr=int(request.POST['numerito'])
 
     if num_usr == numero:
         mensaje='Felicidades!!!! Has adivinado el numero'
