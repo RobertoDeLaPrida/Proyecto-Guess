@@ -9,7 +9,7 @@
     <h1>Bienvenido juego para adivinar el numero secreto entre 1 y 100</h1>
     <form action="{% url 'guess' %}" method="post">
         {% csrf_token %}
-        <input type="number" name="numerito" required>
+        <input type="number" name="numerito" required max="100" min="1">
         <button type="submit" name="">Adivinar</button>
 
     </form>
